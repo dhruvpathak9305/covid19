@@ -14,7 +14,23 @@ body{
 .app__left{
   flex:0.9;
 }
- 
+.app_right{
+  display:flex;
+  flex-direction:column;
+
+}
+
+.app__right .MuiCardContent-root{
+  display:flex;
+  flex-direction:column;
+  flex-grow:1;
+}
+
+
+.app__dropdown{
+background-color:white;
+}
+
 .app__header {
   display: flex;
   justify-content: space-between;
@@ -22,9 +38,34 @@ body{
   margin-bottom: 20px;
 }
 
-.app__stats{
+.app__header>h1{
+  color:#fc3c3c;
+  font-size:2rem;
+}
+
+/* In Mozilla it is adding a an additional div so had to add this style */
+.app__stats {
   display:flex;
 justify-content: space-between;
+
+}
+.app__stats > div{
+  display:flex;
+  flex:1;
+}
+
+.app__stats > div:not(:last-child){
+  margin-right:10px;
+}
+
+.app__graphTitle{
+  margin-top:20px;
+  margin-bottom:20px;
+
+}
+
+.app__graph{
+  flex-grow:1;
 }
 
 @media (max-width:990px){
